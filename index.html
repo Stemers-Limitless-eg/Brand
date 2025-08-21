@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stemers Limitless - School Uniforms</title>
+  <title>Stemers Limitless - Clothes Brand </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Global Reset */
@@ -35,6 +35,28 @@
     body.dark-mode .dropdown-menu {
       background: rgba(40, 55, 70, 0.95);
       color: #e6e6e6;
+    }
+    body.dark-mode .subheading {
+      color: #e6e6e6;
+    }
+    body.dark-mode .card-content p { 
+      color: #ccc; 
+    }
+    body.dark-mode .step {
+      background: #2a3b4c;
+    }
+    body.dark-mode .modal-content {
+      background: #2a3b4c;
+      color: #e6e6e6;
+    }
+    body.dark-mode .modal-details h2 {
+      color: #e6e6e6;
+    }
+    body.dark-mode .modal-details p {
+      color: #ccc;
+    }
+    body.dark-mode .close-modal {
+      color: #ccc;
     }
 
     /* Subtle Background Shapes */
@@ -125,7 +147,7 @@
       transform: rotate(30deg);
     }
 
-    /* Dropdown for Products */
+    /* Dropdown for Navigation */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -224,15 +246,15 @@
       margin: 1.5rem 0 1rem 0;
       color: #0d2b52;
       text-align: left;
-    }
-    body.dark-mode .subheading {
-      color: #e6e6e6;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #2787a4;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
+      margin-bottom: 3rem;
     }
     .card {
       background: #fff;
@@ -253,6 +275,10 @@
     .card:nth-child(5) { animation-delay: 1.0s; }
     .card:nth-child(6) { animation-delay: 1.2s; }
     .card:nth-child(7) { animation-delay: 1.4s; }
+    .card:nth-child(8) { animation-delay: 1.6s; }
+    .card:nth-child(9) { animation-delay: 1.8s; }
+    .card:nth-child(10) { animation-delay: 2.0s; }
+    .card:nth-child(11) { animation-delay: 2.2s; }
     .card:hover {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
@@ -270,7 +296,6 @@
     }
     .card-content h3 { margin-bottom: 0.5rem; }
     .card-content p { margin: 0.3rem 0; font-size: 0.9rem; color: #444; }
-    body.dark-mode .card-content p { color: #ccc; }
 
     /* Quick Order Button */
     .quick-order {
@@ -312,10 +337,6 @@
       animation: slideUp 0.4s ease;
       position: relative;
     }
-    body.dark-mode .modal-content {
-      background: #2a3b4c;
-      color: #e6e6e6;
-    }
     .close-modal {
       position: absolute;
       top: 15px;
@@ -336,9 +357,6 @@
     }
     .close-modal:hover {
       background: rgba(0,0,0,0.8);
-    }
-    body.dark-mode .close-modal {
-      color: #ccc;
     }
     .modal-body {
       display: flex;
@@ -367,16 +385,10 @@
       color: #0d2b52;
       font-size: 1.8rem;
     }
-    body.dark-mode .modal-details h2 {
-      color: #e6e6e6;
-    }
     .modal-details p {
       margin: 0.8rem 0;
       color: #555;
       font-size: 1.1rem;
-    }
-    body.dark-mode .modal-details p {
-      color: #ccc;
     }
     .modal-order-btn {
       display: inline-block;
@@ -425,9 +437,6 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
-    body.dark-mode .step {
-      background: #2a3b4c;
-    }
     .step:hover {
       transform: translateY(-5px);
     }
@@ -471,6 +480,31 @@
       100% { transform: scale(1); }
     }
 
+    /* Navigation Tabs */
+    .category-tabs {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .category-tab {
+      padding: 0.8rem 1.5rem;
+      margin: 0 0.5rem 1rem;
+      background: #fff;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-weight: 600;
+    }
+    .category-tab.active {
+      background: #2787a4;
+      color: white;
+    }
+    .category-tab:hover:not(.active) {
+      background: #e6f0fa;
+    }
+
     /* Small responsive tweaks */
     @media (max-width: 768px) {
       .modal-body {
@@ -490,6 +524,10 @@
       }
       .grid {
         grid-template-columns: 1fr;
+      }
+      .category-tab {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -514,7 +552,7 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <h2>Premium School Uniforms For Every Student</h2>
+    <h2>Premium School Uniforms & Collections</h2>
     <p>Professional, durable, and comfortable designs for academic excellence.</p>
     <a href="#products" class="btn">Explore Our Collection</a>
   </section>
@@ -538,17 +576,24 @@
     </div>
   </section>
 
+  <!-- Category Navigation Tabs -->
+  <div class="category-tabs" id="categoryTabs">
+    <div class="category-tab active" data-category="school">School Uniform</div>
+    <div class="category-tab" data-category="local">Local Collection</div>
+    <div class="category-tab" data-category="bookmark">Book Marks</div>
+  </div>
+
   <!-- Products (wrapper) -->
   <section class="products" id="products">
     
     <!-- School Uniform -->
-    <div id="school" aria-label="School Uniform">
+    <div id="school" class="category-section">
       <div class="subheading" style="text-align:center; font-weight:700; margin-bottom:2.5rem; font-size:1.8rem;">Our School Uniform Collection</div>
       <div class="grid">
-        <div class="card" data-product="Blue Summer T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Blue" data-image="https://i.postimg.cc/ZYPYtcKW/Blue-Summer-T-Shirt.png">
-          <img src="https://i.postimg.cc/ZYPYtcKW/Blue-Summer-T-Shirt.png" alt="Blue Summer T-Shirt">
+        <div class="card" data-product="Blue Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Blue" data-image="Picture1.png">
+          <img src="Picture1.png" alt="Blue Half Sleeve T-Shirt">
           <div class="card-content">
-            <h3>Blue Summer T-Shirt</h3>
+            <h3>Blue Half Sleeve T-Shirt</h3>
             <p>Price: 275 EGP</p>
             <p>Sizes: S - XL</p>
             <p>Colors: Blue</p>
@@ -556,10 +601,10 @@
           </div>
         </div>
 
-        <div class="card" data-product="Blue Winter T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Blue" data-image="https://i.postimg.cc/ryZnm6p3/Blue-Winter-T-Shirt.png">
-          <img src="https://i.postimg.cc/ryZnm6p3/Blue-Winter-T-Shirt.png" alt="Blue Winter T-Shirt">
+        <div class="card" data-product="Blue Full Sleeve T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Blue" data-image="Picture2.png">
+          <img src="Picture2.png" alt="Blue Full Sleeve T-Shirt">
           <div class="card-content">
-            <h3>Blue Winter T-Shirt</h3>
+            <h3>Blue Full Sleeve T-Shirt</h3>
             <p>Price: 325 EGP</p>
             <p>Sizes: S - XL</p>
             <p>Colors: Blue</p>
@@ -567,10 +612,10 @@
           </div>
         </div>
 
-        <div class="card" data-product="Light Blue Short-Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Light Blue" data-image="https://i.postimg.cc/zBBwZBTB/Light-Blue-Short-Sleeve-T-Shirt.png">
-          <img src="https://i.postimg.cc/zBBwZBTB/Light-Blue-Short-Sleeve-T-Shirt.png" alt="Light Blue Short-Sleeve T-Shirt">
+        <div class="card" data-product="Light Blue Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Light Blue" data-image="Picture3.png">
+          <img src="Picture3.png" alt="Light Blue Half Sleeve T-Shirt">
           <div class="card-content">
-            <h3>Light Blue T-Shirt</h3>
+            <h3>Light Blue Half Sleeve T-Shirt</h3>
             <p>Price: 275 EGP</p>
             <p>Sizes: S - XL</p>
             <p>Colors: Light Blue</p>
@@ -578,21 +623,10 @@
           </div>
         </div>
 
-        <div class="card" data-product="Navy Blue Pants" data-price="325" data-sizes="28,30,32,34,36,38,40" data-colors="https://i.postimg.cc/N0NJrZ4K/Navy-Blue-Pants.png">
-          <img src="https://i.postimg.cc/N0NJrZ4K/Navy-Blue-Pants.png" alt="Navy Blue Pants">
+        <div class="card" data-product="Pink Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Pink" data-image="Picture4.png">
+          <img src="Picture4.png" alt="Pink Half Sleeve T-Shirt">
           <div class="card-content">
-            <h3>Navy Blue Pants</h3>
-            <p>Price: 325 EGP</p>
-            <p>Sizes: 28 - 40</p>
-            <p>Colors: Navy Blue</p>
-            <a href="#contact" class="quick-order">Quick Order</a>
-          </div>
-        </div>
-
-        <div class="card" data-product="Pink Summer T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Pink" data-image="https://i.postimg.cc/9QLtxZqS/Pink-Summer-T-Shirt.png">
-          <img src="https://i.postimg.cc/9QLtxZqS/Pink-Summer-T-Shirt.png" alt="Pink Summer T-Shirt">
-          <div class="card-content">
-            <h3>Pink Summer T-Shirt</h3>
+            <h3>Pink Half Sleeve T-Shirt</h3>
             <p>Price: 275 EGP</p>
             <p>Sizes: S - XL</p>
             <p>Colors: Pink</p>
@@ -600,24 +634,284 @@
           </div>
         </div>
 
-        <div class="card" data-product="Pink Winter T-Shirt" data-price="300" data-sizes="S,M,L,XL" data-colors="Pink" data-image="https://i.postimg.cc/gJZVk7BF/Pink-Winter-T-Shirt.png">
-          <img src="https://i.postimg.cc/gJZVk7BF/Pink-Winter-T-Shirt.png" alt="Pink Winter T-Shirt">
+        <div class="card" data-product="Pink Full Sleeve T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Pink" data-image="Picture5.png">
+          <img src="Picture5.png" alt="Pink Full Sleeve T-Shirt">
           <div class="card-content">
-            <h3>Pink Winter T-Shirt</h3>
-            <p>Price: 300 EGP</p>
+            <h3>Pink Full Sleeve T-Shirt</h3>
+            <p>Price: 325 EGP</p>
             <p>Sizes: S - XL</p>
             <p>Colors: Pink</p>
             <a href="#contact" class="quick-order">Quick Order</a>
           </div>
         </div>
 
-        <div class="card" data-product="Winter Jacket" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue, Black" data-image="https://i.postimg.cc/Bnn21bwC/Winter-Jacket.png">
-          <img src="https://i.postimg.cc/Bnn21bwC/Winter-Jacket.png" alt="Winter Jacket">
+        <div class="card" data-product="Navy Blue Pants" data-price="350" data-sizes="28,30,32,34,36,38,40" data-colors="Navy Blue" data-image="Picture6.png">
+          <img src="Picture6.png" alt="Navy Blue Pants">
           <div class="card-content">
-            <h3>Winter Jacket</h3>
+            <h3>Navy Blue Pants</h3>
+            <p>Price: 350 EGP</p>
+            <p>Sizes: 28 - 40</p>
+            <p>Colors: Navy Blue</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+
+        <div class="card" data-product="Islamic Pants (Blue/Black)" data-price="400" data-sizes="28,30,32,34,36,38,40" data-colors="Blue, Black" data-image="Picture7.png">
+          <img src="Picture7.png" alt="Islamic Pants (Blue/Black)">
+          <div class="card-content">
+            <h3>Islamic Pants (Blue/Black)</h3>
+            <p>Price: 400 EGP</p>
+            <p>Sizes: 28 - 40</p>
+            <p>Colors: Blue, Black</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+
+        <div class="card" data-product="Jilbab (Blue/Black)" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue, Black" data-image="Picture8.png">
+          <img src="Picture8.png" alt="Jilbab (Blue/Black)">
+          <div class="card-content">
+            <h3>Jilbab (Blue/Black)</h3>
             <p>Price: 500 EGP</p>
             <p>Sizes: S - XL</p>
             <p>Colors: Blue, Black</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+
+        <div class="card" data-product="Blue Jacket" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue" data-image="Picture9.png">
+          <img src="Picture9.png" alt="Blue Jacket">
+          <div class="card-content">
+            <h3>Blue Jacket</h3>
+            <p>Price: 500 EGP</p>
+            <p>Sizes: S - XL</p>
+            <p>Colors: Blue</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+
+        <div class="card" data-product="Blue Cap" data-price="150" data-sizes="One Size" data-colors="Blue" data-image="Picture10.png">
+          <img src="Picture10.png" alt="Blue Cap">
+          <div class="card-content">
+            <h3>Blue Cap</h3>
+            <p>Price: 150 EGP</p>
+            <p>Sizes: One Size</p>
+            <p>Colors: Blue</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+
+        <div class="card" data-product="Pink Cap" data-price="150" data-sizes="One Size" data-colors="Pink" data-image="Picture11.png">
+          <img src="Picture11.png" alt="Pink Cap">
+          <div class="card-content">
+            <h3>Pink Cap</h3>
+            <p>Price: 150 EGP</p>
+            <p>Sizes: One Size</p>
+            <p>Colors: Pink</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Local Collection -->
+    <div id="local" class="category-section" style="display:none;">
+      <div class="subheading" style="text-align:center; font-weight:700; margin-bottom:2.5rem; font-size:1.8rem;">Local Collection</div>
+      
+      <div class="subheading">350 EGP Items</div>
+      <div class="grid">
+        <!-- Items from Picture12 to Picture30 -->
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture12.png">
+          <img src="Picture12.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 350 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <!-- Repeat similar structure for other items in this price range -->
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture13.png">
+          <img src="Picture13.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 350 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture14.png">
+          <img src="Picture14.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 350 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture15.png">
+          <img src="Picture15.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 350 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="subheading">375 EGP Items</div>
+      <div class="grid">
+        <!-- Items from Picture31 to Picture34 -->
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture31.png">
+          <img src="Picture31.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 375 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture32.png">
+          <img src="Picture32.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 375 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture33.png">
+          <img src="Picture33.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 375 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture34.png">
+          <img src="Picture34.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 375 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="subheading">300 EGP Items</div>
+      <div class="grid">
+        <!-- Items from Picture35 to Picture39 -->
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture35.png">
+          <img src="Picture35.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 300 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture36.png">
+          <img src="Picture36.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 300 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture37.png">
+          <img src="Picture37.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 300 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture38.png">
+          <img src="Picture38.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 300 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture39.png">
+          <img src="Picture39.png" alt="Local Collection Item">
+          <div class="card-content">
+            <h3>Local Collection Item</h3>
+            <p>Price: 300 EGP</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Marks -->
+    <div id="bookmark" class="category-section" style="display:none;">
+      <div class="subheading" style="text-align:center; font-weight:700; margin-bottom:2.5rem; font-size:1.8rem;">Book Marks Collection</div>
+      <div class="grid">
+        <!-- Items from Picture40 to Picture46 -->
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture40.png">
+          <img src="Picture40.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture41.png">
+          <img src="Picture41.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture42.png">
+          <img src="Picture42.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture43.png">
+          <img src="Picture43.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture44.png">
+          <img src="Picture44.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture45.png">
+          <img src="Picture45.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
+            <a href="#contact" class="quick-order">Quick Order</a>
+          </div>
+        </div>
+        
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture46.png">
+          <img src="Picture46.png" alt="Book Mark">
+          <div class="card-content">
+            <h3>Book Mark</h3>
+            <p>Contact for price</p>
             <a href="#contact" class="quick-order">Quick Order</a>
           </div>
         </div>
@@ -637,6 +931,8 @@
         <div class="modal-details">
           <h2 id="modalTitle"></h2>
           <p id="modalPrice"></p>
+          <p id="modalSizes"></p>
+          <p id="modalColors"></p>
           <button class="modal-order-btn" onclick="window.open('https://forms.gle/iYRnD5MBkd3A5BBT6', '_blank')">Order Now</button>
         </div>
       </div>
@@ -682,24 +978,64 @@
         }
       });
 
-      // Product modal functionality - for image viewing only
+      // Category tabs functionality
+      const categoryTabs = document.querySelectorAll('.category-tab');
+      const categorySections = document.querySelectorAll('.category-section');
+      
+      categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs
+          categoryTabs.forEach(t => t.classList.remove('active'));
+          // Add active class to clicked tab
+          tab.classList.add('active');
+          
+          // Hide all sections
+          categorySections.forEach(section => {
+            section.style.display = 'none';
+          });
+          
+          // Show the selected section
+          const categoryId = tab.getAttribute('data-category');
+          document.getElementById(categoryId).style.display = 'block';
+        });
+      });
+
+      // Product modal functionality
       const cards = document.querySelectorAll('.card');
       const modal = document.getElementById('productModal');
       const closeModal = document.getElementById('closeModal');
       const modalImage = document.getElementById('modalImage');
       const modalTitle = document.getElementById('modalTitle');
       const modalPrice = document.getElementById('modalPrice');
+      const modalSizes = document.getElementById('modalSizes');
+      const modalColors = document.getElementById('modalColors');
 
       cards.forEach(card => {
         card.addEventListener('click', function() {
           const product = this.getAttribute('data-product');
           const price = this.getAttribute('data-price');
+          const sizes = this.getAttribute('data-sizes');
+          const colors = this.getAttribute('data-colors');
           const image = this.getAttribute('data-image');
           
           // Set modal content
           modalImage.src = image;
           modalTitle.textContent = product;
           modalPrice.textContent = `Price: ${price} EGP`;
+          
+          if (sizes && sizes !== 'null') {
+            modalSizes.textContent = `Sizes: ${sizes}`;
+            modalSizes.style.display = 'block';
+          } else {
+            modalSizes.style.display = 'none';
+          }
+          
+          if (colors && colors !== 'null') {
+            modalColors.textContent = `Colors: ${colors}`;
+            modalColors.style.display = 'block';
+          } else {
+            modalColors.style.display = 'none';
+          }
           
           // Show modal
           modal.style.display = 'block';
