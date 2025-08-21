@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stemers Limitless - Clothes Brand </title>
+  <title>Stemers Limitless - School Uniforms & More</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Global Reset */
@@ -16,48 +16,8 @@
       scroll-behavior: smooth;
       position: relative;
       overflow-x: hidden;
-      transition: background 0.5s ease, color 0.5s ease;
     }
     a { text-decoration: none; color: inherit; }
-
-    /* Dark Mode */
-    body.dark-mode {
-      background: linear-gradient(135deg, #1a2b3c, #0d1724, #1e2f40);
-      color: #e6e6e6;
-    }
-    body.dark-mode .card {
-      background: #2a3b4c;
-      color: #e6e6e6;
-    }
-    body.dark-mode .contact {
-      background: rgba(30, 45, 60, 0.8);
-    }
-    body.dark-mode .dropdown-menu {
-      background: rgba(40, 55, 70, 0.95);
-      color: #e6e6e6;
-    }
-    body.dark-mode .subheading {
-      color: #e6e6e6;
-    }
-    body.dark-mode .card-content p { 
-      color: #ccc; 
-    }
-    body.dark-mode .step {
-      background: #2a3b4c;
-    }
-    body.dark-mode .modal-content {
-      background: #2a3b4c;
-      color: #e6e6e6;
-    }
-    body.dark-mode .modal-details h2 {
-      color: #e6e6e6;
-    }
-    body.dark-mode .modal-details p {
-      color: #ccc;
-    }
-    body.dark-mode .close-modal {
-      color: #ccc;
-    }
 
     /* Subtle Background Shapes */
     body::before, body::after {
@@ -132,20 +92,6 @@
       color: #fff;
     }
     nav a:hover, .nav-item:hover { color: #82b3e8; cursor: pointer; }
-
-    /* Dark Mode Toggle */
-    .dark-mode-toggle {
-      background: transparent;
-      border: none;
-      color: #fff;
-      font-size: 1.2rem;
-      cursor: pointer;
-      margin-left: 1rem;
-      transition: transform 0.3s ease;
-    }
-    .dark-mode-toggle:hover {
-      transform: rotate(30deg);
-    }
 
     /* Dropdown for Navigation */
     .dropdown {
@@ -537,16 +483,13 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="https://i.postimg.cc/SNyMwjqp/Logo.png" alt="Stemers Limitless Logo">
+      <img src="images/Logo.png" alt="Stemers Limitless Logo">
       <span>Stemers Limitless</span>
     </div>
     <nav>
       <a href="#home">Home</a>
       <a href="#products">Products</a>
       <a href="#contact">Contact Us</a>
-      <button class="dark-mode-toggle" id="darkModeToggle">
-        <i class="fas fa-moon"></i>
-      </button>
     </nav>
   </header>
 
@@ -590,8 +533,8 @@
     <div id="school" class="category-section">
       <div class="subheading" style="text-align:center; font-weight:700; margin-bottom:2.5rem; font-size:1.8rem;">Our School Uniform Collection</div>
       <div class="grid">
-        <div class="card" data-product="Blue Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Blue" data-image="Picture1.png">
-          <img src="Picture1.png" alt="Blue Half Sleeve T-Shirt">
+        <div class="card" data-product="Blue Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Blue" data-image="images/Picture1.png">
+          <img src="images/Picture1.png" alt="Blue Half Sleeve T-Shirt">
           <div class="card-content">
             <h3>Blue Half Sleeve T-Shirt</h3>
             <p>Price: 275 EGP</p>
@@ -601,8 +544,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Blue Full Sleeve T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Blue" data-image="Picture2.png">
-          <img src="Picture2.png" alt="Blue Full Sleeve T-Shirt">
+        <div class="card" data-product="Blue Full Sleeve T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Blue" data-image="images/Picture2.png">
+          <img src="images/Picture2.png" alt="Blue Full Sleeve T-Shirt">
           <div class="card-content">
             <h3>Blue Full Sleeve T-Shirt</h3>
             <p>Price: 325 EGP</p>
@@ -612,8 +555,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Light Blue Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Light Blue" data-image="Picture3.png">
-          <img src="Picture3.png" alt="Light Blue Half Sleeve T-Shirt">
+        <div class="card" data-product="Light Blue Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Light Blue" data-image="images/Picture3.png">
+          <img src="images/Picture3.png" alt="Light Blue Half Sleeve T-Shirt">
           <div class="card-content">
             <h3>Light Blue Half Sleeve T-Shirt</h3>
             <p>Price: 275 EGP</p>
@@ -623,8 +566,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Pink Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Pink" data-image="Picture4.png">
-          <img src="Picture4.png" alt="Pink Half Sleeve T-Shirt">
+        <div class="card" data-product="Pink Half Sleeve T-Shirt" data-price="275" data-sizes="S,M,L,XL" data-colors="Pink" data-image="images/Picture4.png">
+          <img src="images/Picture4.png" alt="Pink Half Sleeve T-Shirt">
           <div class="card-content">
             <h3>Pink Half Sleeve T-Shirt</h3>
             <p>Price: 275 EGP</p>
@@ -634,8 +577,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Pink Full Sleeve T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Pink" data-image="Picture5.png">
-          <img src="Picture5.png" alt="Pink Full Sleeve T-Shirt">
+        <div class="card" data-product="Pink Full Sleeve T-Shirt" data-price="325" data-sizes="S,M,L,XL" data-colors="Pink" data-image="images/Picture5.png">
+          <img src="images/Picture5.png" alt="Pink Full Sleeve T-Shirt">
           <div class="card-content">
             <h3>Pink Full Sleeve T-Shirt</h3>
             <p>Price: 325 EGP</p>
@@ -645,8 +588,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Navy Blue Pants" data-price="350" data-sizes="28,30,32,34,36,38,40" data-colors="Navy Blue" data-image="Picture6.png">
-          <img src="Picture6.png" alt="Navy Blue Pants">
+        <div class="card" data-product="Navy Blue Pants" data-price="350" data-sizes="28,30,32,34,36,38,40" data-colors="Navy Blue" data-image="images/Picture6.png">
+          <img src="images/Picture6.png" alt="Navy Blue Pants">
           <div class="card-content">
             <h3>Navy Blue Pants</h3>
             <p>Price: 350 EGP</p>
@@ -656,8 +599,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Islamic Pants (Blue/Black)" data-price="400" data-sizes="28,30,32,34,36,38,40" data-colors="Blue, Black" data-image="Picture7.png">
-          <img src="Picture7.png" alt="Islamic Pants (Blue/Black)">
+        <div class="card" data-product="Islamic Pants (Blue/Black)" data-price="400" data-sizes="28,30,32,34,36,38,40" data-colors="Blue, Black" data-image="images/Picture7.png">
+          <img src="images/Picture7.png" alt="Islamic Pants (Blue/Black)">
           <div class="card-content">
             <h3>Islamic Pants (Blue/Black)</h3>
             <p>Price: 400 EGP</p>
@@ -667,8 +610,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Jilbab (Blue/Black)" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue, Black" data-image="Picture8.png">
-          <img src="Picture8.png" alt="Jilbab (Blue/Black)">
+        <div class="card" data-product="Jilbab (Blue/Black)" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue, Black" data-image="images/Picture8.png">
+          <img src="images/Picture8.png" alt="Jilbab (Blue/Black)">
           <div class="card-content">
             <h3>Jilbab (Blue/Black)</h3>
             <p>Price: 500 EGP</p>
@@ -678,8 +621,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Blue Jacket" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue" data-image="Picture9.png">
-          <img src="Picture9.png" alt="Blue Jacket">
+        <div class="card" data-product="Blue Jacket" data-price="500" data-sizes="S,M,L,XL" data-colors="Blue" data-image="images/Picture9.png">
+          <img src="images/Picture9.png" alt="Blue Jacket">
           <div class="card-content">
             <h3>Blue Jacket</h3>
             <p>Price: 500 EGP</p>
@@ -689,8 +632,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Blue Cap" data-price="150" data-sizes="One Size" data-colors="Blue" data-image="Picture10.png">
-          <img src="Picture10.png" alt="Blue Cap">
+        <div class="card" data-product="Blue Cap" data-price="150" data-sizes="One Size" data-colors="Blue" data-image="images/Picture10.png">
+          <img src="images/Picture10.png" alt="Blue Cap">
           <div class="card-content">
             <h3>Blue Cap</h3>
             <p>Price: 150 EGP</p>
@@ -700,8 +643,8 @@
           </div>
         </div>
 
-        <div class="card" data-product="Pink Cap" data-price="150" data-sizes="One Size" data-colors="Pink" data-image="Picture11.png">
-          <img src="Picture11.png" alt="Pink Cap">
+        <div class="card" data-product="Pink Cap" data-price="150" data-sizes="One Size" data-colors="Pink" data-image="images/Picture11.png">
+          <img src="images/Picture11.png" alt="Pink Cap">
           <div class="card-content">
             <h3>Pink Cap</h3>
             <p>Price: 150 EGP</p>
@@ -720,8 +663,8 @@
       <div class="subheading">350 EGP Items</div>
       <div class="grid">
         <!-- Items from Picture12 to Picture30 -->
-        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture12.png">
-          <img src="Picture12.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture12.png">
+          <img src="images/Picture12.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 350 EGP</p>
@@ -730,8 +673,8 @@
         </div>
         
         <!-- Repeat similar structure for other items in this price range -->
-        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture13.png">
-          <img src="Picture13.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture13.png">
+          <img src="images/Picture13.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 350 EGP</p>
@@ -739,8 +682,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture14.png">
-          <img src="Picture14.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture14.png">
+          <img src="images/Picture14.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 350 EGP</p>
@@ -748,8 +691,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture15.png">
-          <img src="Picture15.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="350" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture15.png">
+          <img src="images/Picture15.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 350 EGP</p>
@@ -761,8 +704,8 @@
       <div class="subheading">375 EGP Items</div>
       <div class="grid">
         <!-- Items from Picture31 to Picture34 -->
-        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture31.png">
-          <img src="Picture31.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture31.png">
+          <img src="images/Picture31.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 375 EGP</p>
@@ -770,8 +713,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture32.png">
-          <img src="Picture32.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture32.png">
+          <img src="images/Picture32.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 375 EGP</p>
@@ -779,8 +722,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture33.png">
-          <img src="Picture33.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture33.png">
+          <img src="images/Picture33.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 375 EGP</p>
@@ -788,8 +731,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture34.png">
-          <img src="Picture34.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="375" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture34.png">
+          <img src="images/Picture34.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 375 EGP</p>
@@ -801,8 +744,8 @@
       <div class="subheading">300 EGP Items</div>
       <div class="grid">
         <!-- Items from Picture35 to Picture39 -->
-        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture35.png">
-          <img src="Picture35.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture35.png">
+          <img src="images/Picture35.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 300 EGP</p>
@@ -810,8 +753,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture36.png">
-          <img src="Picture36.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture36.png">
+          <img src="images/Picture36.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 300 EGP</p>
@@ -819,8 +762,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture37.png">
-          <img src="Picture37.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture37.png">
+          <img src="images/Picture37.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 300 EGP</p>
@@ -828,8 +771,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture38.png">
-          <img src="Picture38.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture38.png">
+          <img src="images/Picture38.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 300 EGP</p>
@@ -837,8 +780,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="Picture39.png">
-          <img src="Picture39.png" alt="Local Collection Item">
+        <div class="card" data-product="Local Collection Item" data-price="300" data-sizes="Available in multiple sizes" data-colors="Various" data-image="images/Picture39.png">
+          <img src="images/Picture39.png" alt="Local Collection Item">
           <div class="card-content">
             <h3>Local Collection Item</h3>
             <p>Price: 300 EGP</p>
@@ -853,8 +796,8 @@
       <div class="subheading" style="text-align:center; font-weight:700; margin-bottom:2.5rem; font-size:1.8rem;">Book Marks Collection</div>
       <div class="grid">
         <!-- Items from Picture40 to Picture46 -->
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture40.png">
-          <img src="Picture40.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture40.png">
+          <img src="images/Picture40.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -862,8 +805,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture41.png">
-          <img src="Picture41.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture41.png">
+          <img src="images/Picture41.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -871,8 +814,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture42.png">
-          <img src="Picture42.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture42.png">
+          <img src="images/Picture42.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -880,8 +823,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture43.png">
-          <img src="Picture43.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture43.png">
+          <img src="images/Picture43.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -889,8 +832,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture44.png">
-          <img src="Picture44.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture44.png">
+          <img src="images/Picture44.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -898,8 +841,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture45.png">
-          <img src="Picture45.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture45.png">
+          <img src="images/Picture45.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -907,8 +850,8 @@
           </div>
         </div>
         
-        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="Picture46.png">
-          <img src="Picture46.png" alt="Book Mark">
+        <div class="card" data-product="Book Mark" data-price="Contact for price" data-image="images/Picture46.png">
+          <img src="images/Picture46.png" alt="Book Mark">
           <div class="card-content">
             <h3>Book Mark</h3>
             <p>Contact for price</p>
@@ -955,29 +898,6 @@
 
   <script>
     (function(){
-      // Toggle dark mode
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      const body = document.body;
-      const icon = darkModeToggle.querySelector('i');
-      
-      // Check for saved dark mode preference
-      if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
-        icon.classList.replace('fa-moon', 'fa-sun');
-      }
-      
-      darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        
-        if (body.classList.contains('dark-mode')) {
-          localStorage.setItem('darkMode', 'enabled');
-          icon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-          localStorage.setItem('darkMode', null);
-          icon.classList.replace('fa-sun', 'fa-moon');
-        }
-      });
-
       // Category tabs functionality
       const categoryTabs = document.querySelectorAll('.category-tab');
       const categorySections = document.querySelectorAll('.category-section');
